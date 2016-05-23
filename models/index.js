@@ -1,8 +1,9 @@
 
 
 var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/angular_review");
+mongoose.connect("mongodb://localhost/my_costco_list");
 
-var Person = require('./person');
+var List = require('./list');
 
-module.exports.Person = Person;
+module.exports.List = List;
+module.exports.Item = require('./item');
