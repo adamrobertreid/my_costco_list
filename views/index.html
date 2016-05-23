@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="angular_review">
+  <head>
+    <meta charset="utf-8">
+    <title>angular_review</title>
+
+    <script type="text/javascript" src="/scripts/app.js">
+
+    </script>
+  </head>
+  <body>
+    <div class="container" ng-controller=" PersonsIndexController as personsIndexCtrl  ">
+      <input type="text" class="form-control" placeholder="Enter your name" ng-model="personsIndexCtrl.newPerson.name">
+      <input type="text" class="form-control" placeholder="Enter your age" ng-model="personsIndexCtrl.newPerson.age">
+      <div ng-repeat="person in personsIndexCtrl.persons | orderBy: 'name' | filter: searchText" class="row">
+    </div>
+  </body>
+</html>
